@@ -25,9 +25,9 @@ Answer:
 		$ sudo rmmod cmpe283-1.ko
 		
 Outputs:
-![Image](/img/1.jpg)
-![Image](/img/2.jpg)
-![Image](/img/3.jpg)
-![Image](/img/4.jpg)
-![Image](/img/5.jpg)
+![Image](img/1.jpg)
+![Image](img/2.jpg)
+![Image](img/3.jpg)
+![Image](img/4.jpg)
+![Image](img/5.jpg)
 	
