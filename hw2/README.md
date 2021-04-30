@@ -5,31 +5,31 @@
 
 2. Describe in detail the steps you used to complete the assignment. Consider your reader to be someone skilled in software development but otherwise unfamiliar with the assignment. Good answers to this question will be recipes that someone can follow to reproduce your development steps.
 * Answer: 
-	0) Prerequisite: the develop environment created for assignment 1
-	1) Fork the repository https://github.com/torvalds/linux
-	2) Clone the forked repository
-	3) Perform the following commands in the cloned repository
+	1) Prerequisite: the develop environment created for assignment 1
+	2) Fork the repository https://github.com/torvalds/linux
+	3) Clone the forked repository
+	4) Perform the following commands in the cloned repository
 	> sudo bash
-	# check the kernel version
+	> # check the kernel version
 	> uname -a
-	# replace 'your-own-kernel-version' with your kernel version
+	> # replace 'your-own-kernel-version' with your kernel version
 	> cp /boot/config-your-own-kernel-version ./.config
-	# press enter key for all questions
+	> # press enter key for all questions
 	> make oldconfig
-	# The number represents the number of processors you are using, change the number 8 according to your own situation 
+	> # The number represents the number of processors you are using, change the number 8 according to your own situation 
 	> make -j 8 modules && make -j 8 && sudo make modules_install && sudo make install
 	> reboot
-	# check if the kernel version is updated
+	> # check if the kernel version is updated
 	> uname -a
-	4) make changes to cpuid.c under /linux/arch/x86/kvm and vmx.c under /linux/arch/x86/kvm/vmx
+	5) make changes to cpuid.c under /linux/arch/x86/kvm and vmx.c under /linux/arch/x86/kvm/vmx
 	> sudo apt-get install git
-	5) Build kernel again and reboot
+	6) Build kernel again and reboot
 	> make -j 8 modules && make -j 8 && sudo make modules_install && sudo make install
 	> reboot
-	6) Set up KVM
+	7) Set up KVM
 	> sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager
-	7) Install nested Ubuntu with virtual manager and Ubuntu ISO (download from Ubuntu official website)
-	8) Write a test program and test
+	8) Install nested Ubuntu with virtual manager and Ubuntu ISO (download from Ubuntu official website)
+	9) Write a test program and test
 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?	
 * Answer:
 	1. No, it does NOT increase at a stable rate. 
