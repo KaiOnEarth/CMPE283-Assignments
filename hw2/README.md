@@ -10,16 +10,16 @@
 	3) Clone the forked repository
 	4) Perform the following commands in the cloned repository
 	> sudo bash
-	> # check the kernel version
+	> ### check the kernel version
 	> uname -a
-	> # replace 'your-own-kernel-version' with your kernel version
+	> ### replace 'your-own-kernel-version' with your kernel version
 	> cp /boot/config-your-own-kernel-version ./.config
-	> # press enter key for all questions
+	> ### press enter key for all questions
 	> make oldconfig
-	> # The number represents the number of processors you are using, change the number 8 according to your own situation 
+	> ### The number represents the number of processors you are using, change the number 8 according to your own situation 
 	> make -j 8 modules && make -j 8 && sudo make modules_install && sudo make install
 	> reboot
-	> # check if the kernel version is updated
+	> ### check if the kernel version is updated
 	> uname -a
 	5) make changes to cpuid.c under /linux/arch/x86/kvm and vmx.c under /linux/arch/x86/kvm/vmx
 	> sudo apt-get install git
